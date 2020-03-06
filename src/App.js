@@ -36,11 +36,13 @@ import User from './components/RenderProps/User';
 import CounterTwo from './components/RenderProps/CounterTwo';
 import ComponentC from './components/Context/ComponentC';
 import { UserProvider } from './components/Context/userContext';
+import PostList from './components/HttpBasics/PostList';
 
 
 function App() {
     return (
         <div className="App">
+            <PostList />
 
             {/*<UserProvider value={'Nathan'}>
                 <ComponentC />
