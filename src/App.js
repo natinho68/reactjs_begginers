@@ -28,10 +28,34 @@ import FrParentInput from './components/Refs/FowardingRefs/FRParentInput';
 import PortalDemo from './components/Portals/PortalDemo';
 import Hero from './components/ErrorBoundaries/Hero';
 import ErrorBoundary from './components/ErrorBoundaries/ErrorBoundary';
+import ClickCounter from './components/HigherOrderComponent/ClickCounter';
+import HoverCounter from './components/HigherOrderComponent/HoverCounter';
+import ClickCounterTwo from './components/RenderProps/ClickCounterTwo';
+import HoverCounterTwo from './components/RenderProps/HoverCounterTwo';
+import User from './components/RenderProps/User';
+import CounterTwo from './components/RenderProps/CounterTwo';
 
 function App() {
     return (
         <div className="App">
+            <CounterTwo>
+                {
+                    (count, incrementCount) =>
+                    <ClickCounterTwo count={ count } incrementCount={ incrementCount } />
+                }
+            </CounterTwo>
+
+            <CounterTwo>
+                {
+                    (count, incrementCount) =>
+                    <HoverCounterTwo count={ count } incrementCount={ incrementCount } />
+                }
+            </CounterTwo>
+            {/*<User render={(isLoggedIn) => isLoggedIn ? 'Nathan' : 'Guest'} />
+            <ClickCounterTwo />
+            <HoverCounterTwo />*/ }
+            {/*<HoverCounter name={'Michel'}/>
+            <ClickCounter name={'Nathan'} />*/ }
             {/*<ErrorBoundary>
                 <Hero heroName={'Batman'}/>
             </ErrorBoundary>
@@ -40,41 +64,41 @@ function App() {
             </ErrorBoundary>
             <ErrorBoundary>
                 <Hero heroName={'Joker'}/>
-            </ErrorBoundary>*/}
-            {/*<PortalDemo />*/}
-            {/*<FrParentInput/>*/}
-            {/*<FocusInput />*/}
-            {/*<RefsDemo />*/}
-            {/*<ParentComp />*/}
-            {/*<PureComp />*/}
-            {/*<Table/>*/}
-            {/*<FragmentDemo />*/}
-            {/*<LifecycleA />*/}
-            {/*<Form />*/}
+            </ErrorBoundary>*/ }
+            {/*<PortalDemo />*/ }
+            {/*<FrParentInput/>*/ }
+            {/*<FocusInput />*/ }
+            {/*<RefsDemo />*/ }
+            {/*<ParentComp />*/ }
+            {/*<PureComp />*/ }
+            {/*<Table/>*/ }
+            {/*<FragmentDemo />*/ }
+            {/*<LifecycleA />*/ }
+            {/*<Form />*/ }
             {/*<h1 className={'error'}>Error</h1>
-            <h1 className={styles.success}>Success</h1>*/}
-            {/*<Inline />*/}
-            {/*<Stylesheet primary={false}/>*/}
-            {/*<NameList/>*/}
-            {/*<UserGreeting />*/}
-            {/*<ParentComponent />*/}
-            {/*<EventBind />*/}
-            {/*<FunctionClick />*/}
-            {/*<Click />*/}
-            {/*<Counter addvalue={1} />*/}
-            {/*<Message />*/}
+            <h1 className={styles.success}>Success</h1>*/ }
+            {/*<Inline />*/ }
+            {/*<Stylesheet primary={false}/>*/ }
+            {/*<NameList/>*/ }
+            {/*<UserGreeting />*/ }
+            {/*<ParentComponent />*/ }
+            {/*<EventBind />*/ }
+            {/*<FunctionClick />*/ }
+            {/*<Click />*/ }
+            {/*<Counter addvalue={1} />*/ }
+            {/*<Message />*/ }
             {/*<Greet name="Peter" heroName="Spider man">
                 <p>This is a children props</p>
-            </Greet>*/}
-            {/*<Greet name="Tony" heroName="Iron man"/>*/}
-            {/*<button>Action</button>*/}
-            {/*<Greet name="Bruce" heroName="Hulk"/>*/}
+            </Greet>*/ }
+            {/*<Greet name="Tony" heroName="Iron man"/>*/ }
+            {/*<button>Action</button>*/ }
+            {/*<Greet name="Bruce" heroName="Hulk"/>*/ }
             {/*<Welcome name="Peter" heroName="Spider man">
                 <p>This is a children props</p>
-            </Welcome>*/}
-            {/*<Welcome name="Tony" heroName="Iron man"/>*/}
-            {/*<Welcome name="Bruce" heroName="Hulk"/>*/}
-            {/*<Hello/>*/}
+            </Welcome>*/ }
+            {/*<Welcome name="Tony" heroName="Iron man"/>*/ }
+            {/*<Welcome name="Bruce" heroName="Hulk"/>*/ }
+            {/*<Hello/>*/ }
         </div>
     );
 }
